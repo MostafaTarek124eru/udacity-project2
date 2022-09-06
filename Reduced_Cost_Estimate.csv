@@ -1,0 +1,16 @@
+﻿Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Reduced_Cost_Estimate,US East (N. Virginia),,Amazon EC2,0,393.37,4720.44,USD,"Operating system (Linux), Quantity (6), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage amount (30 GB), Instance type (c6g.xlarge)"
+Reduced_Cost_Estimate,US East (N. Virginia),backend,Amazon EC2,0,229.55,2754.6,USD,"Operating system (Linux), Quantity (6), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage amount (30 GB), Instance type (m6g.large)"
+Reduced_Cost_Estimate,US East (N. Virginia),rds,Amazon RDS for PostgreSQL,0,2094.24,25130.88,USD,"Storage volume (General Purpose SSD (gp2)), Storage amount (2 TB per month), Nodes (2), Instance Type (db.m5.xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment Option (Multi-AZ), Pricing Model (Reserved), Lease Offering Term (1yr), Purchase Option (No Upfront), Additional backup storage (5 TB)"
+Reduced_Cost_Estimate,US East (N. Virginia),NAT,Network Address Translation (NAT) Gateway,0,1184.85,14218.2,USD,Number of NAT Gateways (1)
+Reduced_Cost_Estimate,US East (N. Virginia),NAT,Data Transfer,0,1792,21504,USD,"DT Inbound: Internet (20 TB per month), DT Outbound: Internet (20 TB per month), DT Intra-Region: (0 TB per month), Data transfer cost (1792)"
+Reduced_Cost_Estimate,US East (N. Virginia),ELB,Application Load Balancer,0,79.57,954.84,USD,Number of Application Load Balancers (2)
+Reduced_Cost_Estimate,US East (N. Virginia),S3 storage,S3 Standard,0,561.3,6735.6,USD,S3 Standard storage (10 TB per month)
+Reduced_Cost_Estimate,US East (N. Virginia),S3 storage,Data Transfer,0,0,0,USD,"DT Inbound: Internet (1 TB per month), DT Outbound: Amazon CloudFront (20 TB per month)"
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Acknowledgement,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,
+Reasoning ,,,,,,,,
+"*upgrading the ec2 model for newer and cheaper instances,using reserved instances will help with cost , reducing the total amount of traffic will help significantly, removing the elasticCache and downgrading the RDS. will decrease performance but will help with the cost",,,,,,,,
