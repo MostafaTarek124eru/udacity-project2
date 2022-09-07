@@ -1,0 +1,29 @@
+﻿Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Increased_Cost_Estimate,US East (N. Virginia),EC2-Frontend 1st region,Amazon EC2,0,1537.46,18449.52,USD,"Operating system (Linux), Quantity (12), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage amount (30 GB), Instance type (c6g.2xlarge)"
+Increased_Cost_Estimate,US East (Ohio),frontEnd 2nd region,Amazon EC2,0,768.73,9224.76,USD,"Operating system (Linux), Quantity (6), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage amount (30 GB), Instance type (c6g.2xlarge)"
+Increased_Cost_Estimate,US East (N. Virginia),backend 1st region,Amazon EC2,0,882.22,10586.64,USD,"Operating system (Linux), Quantity (12), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage amount (30 GB), Instance type (m6g.xlarge)"
+Increased_Cost_Estimate,US East (Ohio),backend 2nd region,Amazon EC2,0,441.11,5293.32,USD,"Operating system (Linux), Quantity (6), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage amount (30 GB), Instance type (m6g.xlarge)"
+Increased_Cost_Estimate,US East (N. Virginia),rds 1st region,Amazon RDS for PostgreSQL,0,4278.298,51339.58,USD,"Storage volume (General Purpose SSD (gp2)), Storage amount (3 TB per month), Nodes (2), Instance Type (db.m6g.4xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment Option (Multi-AZ), Pricing Model (Reserved), Lease Offering Term (1yr), Purchase Option (No Upfront), Additional backup storage (5 TB)"
+Increased_Cost_Estimate,US East (Ohio),rds 2nd region,Amazon RDS for PostgreSQL,0,2382.349,28588.19,USD,"Storage volume (General Purpose SSD (gp2)), Storage amount (3 TB per month), Nodes (1), Instance Type (db.m6g.4xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment Option (Multi-AZ), Pricing Model (Reserved), Lease Offering Term (1yr), Purchase Option (No Upfront), Additional backup storage (5 TB)"
+Increased_Cost_Estimate,US East (Ohio),elasticCache 1st region,Amazon ElastiCache,0,454.79,5457.48,USD,"Nodes (1), Instance type (cache.m4.2xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Cache Engine (Memcached), Cache Node Type (Standard), Pricing strategy (OnDemand), Nodes (0), Instance type (cache.r6gd.12xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Cache Engine (Redis), Cache Node Type (Memory optimized), Pricing strategy (OnDemand)"
+Increased_Cost_Estimate,US East (Ohio),elasticCachce 2nd region,Amazon ElastiCache,0,454.79,5457.48,USD,"Nodes (1), Instance type (cache.m4.2xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Cache Engine (Memcached), Cache Node Type (Standard), Pricing strategy (OnDemand), Nodes (0), Instance type (cache.r6gd.12xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Cache Engine (Redis), Cache Node Type (Memory optimized), Pricing strategy (OnDemand)"
+Increased_Cost_Estimate,US East (N. Virginia),S3 1st region,S3 Standard,0,561.3,6735.6,USD,S3 Standard storage (10 TB per month)
+Increased_Cost_Estimate,US East (N. Virginia),S3 1st region,Data Transfer,0,0,0,USD,"DT Inbound: Internet (20 TB per month), DT Outbound: Amazon CloudFront (30 TB per month)"
+Increased_Cost_Estimate,US East (Ohio),S3 2nd region,S3 Standard,0,561.3,6735.6,USD,S3 Standard storage (10 TB per month)
+Increased_Cost_Estimate,US East (Ohio),S3 2nd region,Data Transfer,0,0,0,USD,"DT Inbound: Internet (20 TB per month), DT Outbound: Amazon CloudFront (30 TB per month)"
+Increased_Cost_Estimate,US East (N. Virginia),vpc 1st region,Network Address Translation (NAT) Gateway,0,1184.85,14218.2,USD,Number of NAT Gateways (1)
+Increased_Cost_Estimate,US East (N. Virginia),vpc 1st region,Data Transfer,0,1792,21504,USD,"DT Inbound: Internet (20 TB per month), DT Outbound: Internet (20 TB per month), DT Intra-Region: (0 TB per month), Data transfer cost (1792)"
+Increased_Cost_Estimate,US East (Ohio),vpc 2nd region,Network Address Translation (NAT) Gateway,0,1184.85,14218.2,USD,Number of NAT Gateways (1)
+Increased_Cost_Estimate,US East (Ohio),vpc 2nd region,Data Transfer,0,1792,21504,USD,"DT Inbound: Internet (20 TB per month), DT Outbound: Internet (20 TB per month), DT Intra-Region: (0 TB per month), Data transfer cost (1792)"
+Increased_Cost_Estimate,US East (N. Virginia),elb 1st region,Application Load Balancer,0,79.57,954.84,USD,Number of Application Load Balancers (2)
+Increased_Cost_Estimate,US East (Ohio),elb 2nd region,Application Load Balancer,0,79.57,954.84,USD,Number of Application Load Balancers (2)
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Acknowledgement,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,
+Changes,,,,,,,,
+"More EC2 instances for scaling, Larger RDS instances, Third availability zone set up in us-east-2 with VPC NAT Gateway, CloudFront, S3 Bucket, Elastic Load Balancing, Elastic Load Balancing, RDS read replica and ElasticCache",,,,,,,,
+Reasoning,,,,,,,,
+"Third availability zone in a second region allows for failover if the whole of the us-east-1 region goes down. Larger RDS instances improve database performance and prepare for growth of the platform over time.
+More EC2 instances improve application performance and prepare for growth of the platform over time.",,,,,,,,
